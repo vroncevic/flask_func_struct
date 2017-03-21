@@ -10,7 +10,7 @@ __status__ = "Updated"
 
 from flask import Blueprint
 from flask import render_template, url_for, redirect, flash, request
-from flask_login import login_user, logout_user, login_required
+from flask_login import login_user, logout_user, login_required, session
 
 from app_server import db, bcrypt
 from app_server.views.user_login import UserLogin
@@ -27,6 +27,7 @@ def login():
 		if user and bcrypt.check_password_hash(
 				user.password, request.form["password"]):
 			login_user(user)
+			session['logged_in'] = True
 			flash("You are logged in. Welcome!", "success")
 			return redirect(url_for("user.members"))
 		else:
@@ -45,6 +46,7 @@ def register():
 		db.session.add(user)
 		db.session.commit()
 		login_user(user)
+		session['logged_in'] = True
 		flash("Thank you for registering.", "success")
 		return redirect(url_for("user.members"))
 	return render_template("user/register.html", form=form)
@@ -53,6 +55,7 @@ def register():
 @login_required
 def logout():
 	logout_user()
+	session['logged_in'] = False
 	flash("You were logged out. Bye!", "success")
 	return redirect(url_for("base.home"))
 
