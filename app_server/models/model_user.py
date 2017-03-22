@@ -13,7 +13,6 @@ import datetime
 from app_server import app, db, bcrypt
 from app_server.models.model_base import Base
 
-
 class User(Base):
 	"""
 	Define class User with attribute(s) and method(s).

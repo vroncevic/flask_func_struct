@@ -8,19 +8,23 @@ __maintainer__ = "Vladimir Roncevic"
 __email__ = "elektron.ronca@gmail.com"
 __status__ = "Updated"
 
+from flask.views import View
 from flask import render_template
-from flask import Blueprint
 
-base_blueprint = Blueprint("base", __name__)
+class Home(View):
+	"""
+	Define class Home with attribute(s) and method(s).
+	View for home page.
+	It defines:
+		attribute:
+			None
+		method:
+			dispatch_request - Method view for home page
+	"""
 
-@base_blueprint.route("/")
-def home():
-	return render_template("base/home.html")
-
-@base_blueprint.route("/contact/")
-def contact():
-	return render_template("base/contact.html")
-
-@base_blueprint.route("/about/")
-def about():
-	return render_template("base/about.html")
+	def dispatch_request(self):
+		"""
+		:return: Value of the view or error handler
+		:rtype: View
+		"""
+		return render_template("base/home.html")

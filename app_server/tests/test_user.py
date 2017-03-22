@@ -8,16 +8,14 @@ __maintainer__ = "Vladimir Roncevic"
 __email__ = "elektron.ronca@gmail.com"
 __status__ = "Updated"
 
-import datetime
 import unittest
 
 from flask_login import current_user
 
 from app_server import bcrypt
-from app_server.views.user_login import UserLogin
+from app_server.forms.user.login import UserLogin
 from app_server.models.model_user import User
 from app_server.tests.base import BaseTestCase
-
 
 class TestUserBlueprint(BaseTestCase):
 

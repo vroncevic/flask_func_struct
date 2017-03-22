@@ -10,9 +10,8 @@ __status__ = "Updated"
 
 from flask_testing import TestCase
 
-from app_server import app, db
+from app_server import app, db, bcrypt
 from app_server.models.model_user import User
-
 
 class BaseTestCase(TestCase):
 
@@ -22,8 +21,11 @@ class BaseTestCase(TestCase):
 
 	def setUp(self):
 		db.create_all()
+		admin_password = bcrypt.generate_password_hash(
+			"admin", app.config.get('BCRYPT_LOG_ROUNDS')
+		)
 		user = User(
-			fullname="Flask Administrator", username="admin",
+			fullname="Flask Administrator", username=admin_password,
 			password="admin", email="admin@admin.com", admin=True
 		)
 		db.session.add(user)

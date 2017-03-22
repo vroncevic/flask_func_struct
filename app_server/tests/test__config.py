@@ -9,8 +9,10 @@ __email__ = "elektron.ronca@gmail.com"
 __status__ = "Updated"
 
 import unittest
+
 from flask import current_app
 from flask_testing import TestCase
+
 from app_server import app
 
 class TestDevelopmentConfig(TestCase):
