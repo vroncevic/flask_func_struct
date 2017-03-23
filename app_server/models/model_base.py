@@ -20,9 +20,7 @@ class Base(db.Model):
 			created - Abstract date of creation
 			modified - Abstract date of modification
 		method:
-			is_authenticated - Authentication status
-			is_active - Getting status
-			is_anonymous - Getting info
+			None
 	"""
 
 	__abstract__ = True
@@ -31,23 +29,3 @@ class Base(db.Model):
 	created = db.Column(db.DateTime, nullable=False)
 	modified = db.Column(db.DateTime, nullable=False)
 
-	def is_authenticated(self):
-		"""
-		:return: Authentication status
-		:type: bool
-		"""
-		return True
-
-	def is_active(self):
-		"""
-		:return: Getting status
-		:type: bool
-		"""
-		return True
-
-	def is_anonymous(self):
-		"""
-		:return: Getting info
-		:type: bool
-		"""
-		return False
