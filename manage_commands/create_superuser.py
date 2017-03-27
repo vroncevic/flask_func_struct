@@ -14,17 +14,16 @@ from flask_script import Command
 
 from app_server.models.model_user import User
 
-
 class CreateSuperUser(Command):
 	"""
 	Define class CreateSuperUser with attribute(s) and method(s).
 	Create superuser and insert to database.
 	It defines:
 		attribute:
-			db - SQLAlchemy integration object
+			__db - SQLAlchemy integration object
 		method:
 			__init__ - Initial constructor
-			run - Create admin user and add to database
+			run - Create superuser and insert to database
 	"""
 
 	def __init__(self, db):
@@ -33,16 +32,17 @@ class CreateSuperUser(Command):
 		:type: SQLAlchemy
 		"""
 		super(CreateSuperUser, self).__init__()
-		self.db = db
+		self.__db = db
 
 	def run(self):
-		username = input("Insert username: ")
-		superuser_email = input("Insert admin email: ")
-		superuser_password = getpass("Insert admin password: ")
-		self.db.session.add(
-			User(
-				fullname="Flask Superuser", username=username,
-				password=superuser_password, email=superuser_email, admin=True
-			)
+		username = input("Insert superuser username: ")
+		superuser_email = input("Insert superuser email: ")
+		superuser_password = getpass("Insert superuser password: ")
+		admin = User(
+			username=username, password=superuser_password, admin=True
 		)
-		self.db.session.commit()
+		admin.fullname="Flask Superuser"
+		admin.email=superuser_email
+		self.__db.session.add(admin)
+		self.__db.session.commit()
+		print("Done")

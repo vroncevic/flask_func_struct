@@ -18,7 +18,7 @@ from app_server import app
 class TestDevelopmentConfig(TestCase):
 
 	def create_app(self):
-		app.config.from_object('app_server.configuration.DevelopmentConfig')
+		app.config.from_object("app_server.configuration.DevelopmentConfig")
 		return app
 
 	def test_app_is_development(self):
@@ -31,7 +31,7 @@ class TestDevelopmentConfig(TestCase):
 class TestTestingConfig(TestCase):
 
 	def create_app(self):
-		app.config.from_object('app_server.configuration.TestingConfig')
+		app.config.from_object("app_server.configuration.TestConfig")
 		return app
 
 	def test_app_is_testing(self):
@@ -43,7 +43,7 @@ class TestTestingConfig(TestCase):
 class TestProductionConfig(TestCase):
 
 	def create_app(self):
-		app.config.from_object('app_server.core.config.ProductionConfig')
+		app.config.from_object("app_server.core.config.ProductionConfig")
 		return app
 
 	def test_app_is_production(self):
@@ -53,5 +53,5 @@ class TestProductionConfig(TestCase):
 		self.assertTrue(app.config['WTF_CSRF_ENABLED'] is True)
 		self.assertTrue(app.config['BCRYPT_LOG_ROUNDS'] == 13)
 
-if __name__ == '__main__':
+if __name__ == "__main__":
 	unittest.main()

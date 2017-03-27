@@ -16,7 +16,7 @@ from app_server.models.model_user import User
 class BaseTestCase(TestCase):
 
 	def create_app(self):
-		app.config.from_object('app_server.configuration.TestingConfig')
+		app.config.from_object("app_server.configuration.TestConfig")
 		return app
 
 	def setUp(self):
@@ -25,9 +25,10 @@ class BaseTestCase(TestCase):
 			"admin", app.config.get('BCRYPT_LOG_ROUNDS')
 		)
 		user = User(
-			fullname="Flask Administrator", username=admin_password,
-			password="admin", email="admin@admin.com", admin=True
+			username=admin_password, password="admin", admin=True
 		)
+		user.fullname="Flask Administrator"
+		user.email="admin@admin.com"
 		db.session.add(user)
 		db.session.commit()
 

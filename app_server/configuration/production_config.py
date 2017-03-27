@@ -8,21 +8,30 @@ __maintainer__ = "Vladimir Roncevic"
 __email__ = "elektron.ronca@gmail.com"
 __status__ = "Updated"
 
-class ProductionConfig(object):
+from app_server.configuration import BaseConfig
+
+class ProductionConfig(BaseConfig):
 	"""
 	Define class ProductionConfig with attribute(s) and method(s).
 	Production configuration class.
 	It defines:
 		attribute:
-			SECRET_KEY - Production key for session accessing
-			DEBUG - Enable/Disable debug option
+			DB_USER - Database connection username
+			DB_PASSWORD - Database connection user password
+			DB_HOST - Database server address
+			DB_PORT - Database server port
+			DB_DIALECT - Database dialect prefix
 			SQLALCHEMY_DATABASE_URI - Set DB URI
-			DEBUG_TB_ENABLED - Flask debug toolbar's
 		method:
 			None
 	"""
 
-	SECRET_KEY = 'my_precious'
-	DEBUG = False
-	SQLALCHEMY_DATABASE_URI = 'postgresql://localhost/example'
-	DEBUG_TB_ENABLED = False
+	DB_USER = "mydbuser"
+	DB_PASSWORD = "mydbpassword"
+	DB_HOST = "127.0.0.1"
+	DB_PORT = 5432
+	DB_NAME = "manage_users"
+	DB_DIALECT = "postgresql"
+	SQLALCHEMY_DATABASE_URI = "{0}://{1}:{2}@{3}:{4}/{5}".format(
+		DB_DIALECT, DB_USER, DB_PASSWORD, DB_HOST, DB_PORT, DB_NAME
+	)

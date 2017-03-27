@@ -24,7 +24,7 @@ COV = coverage.coverage(
 	include="app_server/*",
 	omit=[
 		"app_server/tests/*",
-		"app_server/configuration/testing_config.py",
+		"app_server/configuration/test_config.py",
 		"app_server/*/__init__.py"
 	]
 )
@@ -49,6 +49,7 @@ manager.add_command("test_query", ORMTest())
 # python manage.py db migrate
 # python manage.py createsuperuser
 # python manage.py create_data
+# python manage.py test_query
 # python manage.py runserver
 
 if __name__ == "__main__":
