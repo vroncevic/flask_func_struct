@@ -22,7 +22,7 @@ class BaseTestCase(TestCase):
 	def setUp(self):
 		db.create_all()
 		admin_password = bcrypt.generate_password_hash(
-			"admin", app.config.get('BCRYPT_LOG_ROUNDS')
+			"admin", app.config.get("BCRYPT_LOG_ROUNDS")
 		)
 		user = User(
 			username=admin_password, password="admin", admin=True
