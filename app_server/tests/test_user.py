@@ -15,7 +15,7 @@ from flask_login import current_user
 from app_server import bcrypt
 from app_server.forms.user.login import UserLoginForm
 from app_server.models.model_user import User
-from app_server.tests.base import BaseTestCase
+from app_server.tests import BaseTestCase
 
 class TestUserBlueprint(BaseTestCase):
 
@@ -59,12 +59,12 @@ class TestUserBlueprint(BaseTestCase):
 	def test_validate_success_login_form(self):
 		# Ensure correct data validates.
 		form = UserLoginForm(email="admin@admin.com", password="admin")
-		self.assertTrue(form.validate())
+		self.assertTrue(form.validate_on_submit())
 
 	def test_validate_invalid_email_format(self):
 		# Ensure invalid email format throws error.
 		form = UserLoginForm(email="unknown", password="example")
-		self.assertFalse(form.validate())
+		self.assertFalse(form.validate_on_submit())
 
 	def test_get_by_id(self):
 		# Ensure id is correct for the current/logged in user.

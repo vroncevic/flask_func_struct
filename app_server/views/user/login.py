@@ -9,8 +9,10 @@ __email__ = "elektron.ronca@gmail.com"
 __status__ = "Updated"
 
 from flask.views import View
-from flask import render_template, url_for, redirect, flash, request
-from flask_login import login_user, session
+from flask import (
+	session, render_template, url_for, redirect, flash, request
+)
+from flask_login import login_user
 
 from app_server import app, bcrypt
 from app_server.forms.user.login import UserLoginForm
@@ -42,8 +44,8 @@ class Login(View):
 			)
 			if user and password_ok:
 				login_user(user)
-				flash("You are logged in. Welcome!", "success")
 				session["logged_in"] = True
+				flash("You are logged in. Welcome!", "success")
 				if user.admin:
 					return redirect(url_for("user.administration"))
 				return redirect(url_for("user.members"))
