@@ -20,6 +20,7 @@ These modules requires other modules and libraries (Python 2.7/3.4):
 	getpass
 	unittest
 	datetime
+	Flask-0.10.1
 	Flask-Migrate-1.4.0
 	Flask-Script-2.0.5
 	coverage-3.4.3
