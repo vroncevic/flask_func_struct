@@ -13,7 +13,7 @@ from app_server.configuration import BaseConfig
 class TestConfig(BaseConfig):
 	"""
 	Define class DevelopmentConfig with attribute(s) and method(s).
-
+	Test configuration.
 	It defines:
 		attribute:
 			DEBUG - Enable/Disable debug option

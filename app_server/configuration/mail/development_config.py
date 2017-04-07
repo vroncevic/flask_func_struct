@@ -13,12 +13,12 @@ from app_server.configuration.mail import BaseConfig
 class DevelopmentConfig(BaseConfig):
 	"""
 	Define class DevelopmentConfig with attribute(s) and method(s).
-	Define mail development email.
+	Define mail development configuration.
 	It defines:
 		attribute:
-			MAIL_USERNAME - Mail username
-			MAIL_PASSWORD - Mail password
-			MAIL_RECIPIENT - Mail username
+			MAIL_USERNAME - Mail username (sender)
+			MAIL_PASSWORD - Mail password (sender)
+			MAIL_RECIPIENT - Mail username (recipient)
 		method:
 			None
 	"""

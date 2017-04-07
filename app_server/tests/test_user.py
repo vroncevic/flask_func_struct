@@ -9,6 +9,7 @@ __email__ = "elektron.ronca@gmail.com"
 __status__ = "Updated"
 
 import unittest
+from datetime import datetime
 
 from flask_login import current_user
 
@@ -85,7 +86,8 @@ class TestUserBlueprint(BaseTestCase):
 				follow_redirects=True
 			)
 			user = User.query.filter_by(email="admin@admin.com").first()
-			#self.assertIsInstance(user.created, datetime.datetime)
+			# noinspection PyCompatibility
+			self.assertIsInstance(user.created, datetime.datetime)
 
 	def test_check_password(self):
 		# Ensure given password is correct after unhashing.

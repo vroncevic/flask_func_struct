@@ -15,11 +15,11 @@ from wtforms.validators import DataRequired, Email
 class UserLoginForm(FlaskForm):
 	"""
 	Define class UserLoginForm with attribute(s) and method(s).
-	User login form (by email and password).
+	Define user login form (login process by email and password).
 	It defines:
 		attribute:
 			email - User contact email
-			password - User password
+			password - User system password
 		method:
 			None
 	"""

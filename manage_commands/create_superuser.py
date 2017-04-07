@@ -36,19 +36,19 @@ class CreateSuperUser(Command):
 		self.__db = db
 
 	def run(self):
-		print("Create superuser account")
+		print("Creating superuser account")
 		if sys.version_info < (3, 0, 0):
 			# noinspection PyCompatibility
-			username = raw_input("Insert superuser username: ")
+			username = raw_input("Insert username of superuser: ")
 			# noinspection PyCompatibility
-			superuser_email = raw_input("Insert superuser email: ")
+			superuser_email = raw_input("Insert email of superuser: ")
 		elif sys.version_info >= (3, 0, 0):
-			username = input("Insert superuser username: ")
-			superuser_email = input("Insert superuser email: ")
+			username = input("Insert username of superuser: ")
+			superuser_email = input("Insert email of superuser: ")
 		else:
 			username = "admin"
 			superuser_email = "admin@admin.com"
-		superuser_password = getpass("Insert superuser password: ")
+		superuser_password = getpass("Insert password of superuser: ")
 		admin = User(
 			username=username, password=superuser_password, admin=True
 		)
@@ -57,3 +57,4 @@ class CreateSuperUser(Command):
 		self.__db.session.add(admin)
 		self.__db.session.commit()
 		print("Done")
+		return 0

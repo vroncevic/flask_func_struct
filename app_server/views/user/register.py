@@ -21,7 +21,7 @@ from app_server.models.model_user import User
 class Register(View):
 	"""
 	Define class Register with attribute(s) and method(s).
-	Register view for new user (standard user).
+	Define register view for new user (standard user).
 	It defines:
 		attribute:
 			methods - Handler methods
@@ -39,10 +39,11 @@ class Register(View):
 		form = UserRegisterForm(request.form)
 		if form.validate_on_submit():
 			user = User(
-				username=form.username.data, password=form.password.data
+				username=request.form.get("username"),
+				password=request.form.get("password")
 			)
-			user.fullname=form.fullname.data
-			user.email=form.email.data
+			user.fullname=request.form.get("fullname")
+			user.email=request.form.get("email")
 			db.session.add(user)
 			db.session.commit()
 			login_user(user)

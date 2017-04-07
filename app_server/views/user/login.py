@@ -14,14 +14,14 @@ from flask import (
 )
 from flask_login import login_user
 
-from app_server import app, bcrypt
+from app_server import bcrypt
 from app_server.forms.user.login import UserLoginForm
 from app_server.models.model_user import User
 
 class Login(View):
 	"""
 	Define class Login with attribute(s) and method(s).
-	View for login process.
+	Define view for login process.
 	It defines:
 		attribute:
 			methods - Handler methods
@@ -51,7 +51,7 @@ class Login(View):
 				return redirect(url_for("user.members"))
 			else:
 				flash("Invalid email and/or password.", "danger")
-				return render_template('user/login.html', form=form)
+				return render_template("user/login.html", form=form)
 		return render_template(
 			"user/login.html", title="Please Login", form=form
 		)
