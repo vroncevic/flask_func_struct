@@ -1,4 +1,4 @@
-# encoding: utf-8
+# -*- coding: utf-8 -*-
 __author__ = "Vladimir Roncevic"
 __copyright__ = "Copyright 2017, Free software to use and distributed it."
 __credits__ = ["Vladimir Roncevic"]
@@ -20,13 +20,13 @@ from manage_commands.run_test import RunTest
 from manage_commands.orm_test import ORMTest
 
 COV = coverage.coverage(
-	branch=True,
-	include="app_server/*",
-	omit=[
-		"app_server/tests/*",
-		"app_server/configuration/test_config.py",
-		"app_server/*/__init__.py"
-	]
+    branch=True,
+    include="app_server/*",
+    omit=[
+        "app_server/tests/*",
+        "app_server/configuration/test_config.py",
+        "app_server/*/__init__.py"
+    ]
 )
 
 COV.start()
@@ -53,4 +53,4 @@ manager.add_command("test_query", ORMTest())
 # python manage.py runserver
 
 if __name__ == "__main__":
-	manager.run()
+    manager.run()
