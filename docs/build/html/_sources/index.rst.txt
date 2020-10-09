@@ -47,6 +47,13 @@ To install this set of modules type the following:
     cp -R /manage_commands/ /FlaskApp/
     cp -R /app_server/ /Flask/
 
+You can use Docker to create image/container.
+
+|GitHub docker checker|
+
+.. |GitHub docker checker| image:: https://github.com/vroncevic/flask_func_struct/workflows/flask_func_struct%20docker%20checker/badge.svg
+   :target: https://github.com/vroncevic/flask_func_struct/actions?query=workflow%3A%22flask_func_struct+docker+checker%22
+
 Dependencies
 -------------
 
