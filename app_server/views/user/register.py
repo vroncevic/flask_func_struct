@@ -20,15 +20,6 @@
      View for register user data.
 """
 
-__author__ = "Vladimir Roncevic"
-__copyright__ = "Copyright 2017, Free software to use and distributed it."
-__credits__ = ["Vladimir Roncevic"]
-__license__ = "GNU General Public License (GPL)"
-__version__ = "1.0.0"
-__maintainer__ = "Vladimir Roncevic"
-__email__ = "elektron.ronca@gmail.com"
-__status__ = "Updated"
-
 import sys
 
 try:
@@ -40,9 +31,18 @@ try:
     from app_server import db
     from app_server.forms.user.register import UserRegisterForm
     from app_server.models.model_user import User
-except ImportError as error:
-    MESSAGE = "\n{0}\n{1}\n".format(__file__, error)
+except ImportError as error_message:
+    MESSAGE = "\n{0}\n{1}\n".format(__file__, error_message)
     sys.exit(MESSAGE)  # Force close python ATS ##############################
+
+__author__ = "Vladimir Roncevic"
+__copyright__ = "Copyright 2017, Free software to use and distributed it."
+__credits__ = ["Vladimir Roncevic"]
+__license__ = "GNU General Public License (GPL)"
+__version__ = "1.1.0"
+__maintainer__ = "Vladimir Roncevic"
+__email__ = "elektron.ronca@gmail.com"
+__status__ = "Updated"
 
 
 class Register(View):
@@ -61,16 +61,17 @@ class Register(View):
 
     def dispatch_request(self):
         """
-        Method view for user register process
+            Method view for user register process
 
-        :return: Value of the view or error handler
-        :rtype: <View>
-        :exceptions: None
+            :return: Value of the view or error handler
+            :rtype: <View>
+            :exceptions: None
         """
         form = UserRegisterForm(request.form)
         if form.validate_on_submit():
             user = User(
-                username=form.username.data, password=form.password.data
+                username=form.username.data,
+                password=form.password.data
             )
             user.fullname=form.fullname.data
             user.email=form.email.data
