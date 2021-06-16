@@ -1,3 +1,5 @@
+<img align="right" src="https://raw.githubusercontent.com/vroncevic/flask_func_struct/dev/docs/flask_func_struct_logo.png" width="25%">
+
 # Flask Functional-Structured Framework
 
 **flask_func_struct** is framework for managing Flask App.
