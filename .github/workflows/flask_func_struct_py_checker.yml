@@ -14,7 +14,7 @@ jobs:
         run: |
           echo Checking length of line in app_server modules
           modules_ok=0
-          modules=$(find app_server/ -type f -name '*.py' -exec echo '{}' \;)
+          modules=($(find app_server/ -type f -name '*.py' -exec echo '{}' \;))
           for mod in "${modules[@]}"; do line_length=$(wc -L < "${mod}"); [[ $line_length -gt 80 ]] && modules_ok=1; done
           [[ $modules_ok -eq 0 ]] && echo ::set-output name=status::success || echo ::set-output name=status::failure
       - name: Check length of line in manage_commands modules
@@ -22,7 +22,7 @@ jobs:
         run: |
           echo Checking length of line in manage_commands modules
           modules_ok=0
-          modules=$(find manage_commands/ -type f -name '*.py' -exec echo '{}' \;)
+          modules=($(find manage_commands/ -type f -name '*.py' -exec echo '{}' \;))
           for mod in "${modules[@]}"; do line_length=$(wc -L < "${mod}"); [[ $line_length -gt 80 ]] && modules_ok=1; done
           [[ $modules_ok -eq 0 ]] && echo ::set-output name=status::success || echo ::set-output name=status::failure
       - name: Check number of lines in app_server modules
@@ -30,7 +30,7 @@ jobs:
         run: |
           echo Checking number of lines in app_server modules
           modules_ok=0
-          modules=$(find app_server/ -type f -name '*.py' -exec echo '{}' \;)
+          modules=($(find app_server/ -type f -name '*.py' -exec echo '{}' \;))
           for mod in "${modules[@]}"; do line_numbers=$(wc -l < "${mod}"); [[ $line_numbers -gt 300 ]] && modules_ok=1; done
           [[ $modules_ok -eq 0 ]] && echo ::set-output name=status::success || echo ::set-output name=status::failure
       - name: Check number of lines in manage_commands modules
@@ -38,7 +38,7 @@ jobs:
         run: |
           echo Checking number of lines in manage_commands modules
           modules_ok=0
-          modules=$(find manage_commands/ -type f -name '*.py' -exec echo '{}' \;)
+          modules=($(find manage_commands/ -type f -name '*.py' -exec echo '{}' \;))
           for mod in "${modules[@]}"; do line_numbers=$(wc -l < "${mod}"); [[ $line_numbers -gt 300 ]] && modules_ok=1; done
           [[ $modules_ok -eq 0 ]] && echo ::set-output name=status::success || echo ::set-output name=status::failure
       - name: Check on failures
