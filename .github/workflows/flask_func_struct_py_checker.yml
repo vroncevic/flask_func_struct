@@ -2,8 +2,14 @@ name: flask_func_struct py checker
 on:
   push:
     branches: [ master ]
+    paths:
+      - 'app_server/**'
+      - 'setup.py'
   pull_request:
     branches: [ master ]
+    paths:
+      - 'app_server/**'
+      - 'setup.py'
 jobs:
   build:
     runs-on: ubuntu-latest
