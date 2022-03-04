@@ -36,7 +36,7 @@ Navigate to release `page`_ download and extract release archive.
 
 .. _page: https://github.com/vroncevic/flask_func_struct/releases
 
-To install this set of modules type the following:
+To install this set of modules type the following
 
 .. code-block:: bash
 
@@ -57,7 +57,7 @@ You can use Docker to create image/container.
 Dependencies
 -------------
 
-**flask_func_struct** requires next modules and libraries:
+**flask_func_struct** requires next modules and libraries
 
 * Flask
 * Flask-Migrate
@@ -75,9 +75,9 @@ Dependencies
 Library structure
 ------------------
 
-**flask_func_struct** is based on OOP:
+**flask_func_struct** is based on OOP
 
-Framework structure:
+Framework structure
 
 .. code-block:: bash
 

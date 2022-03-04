@@ -28,8 +28,7 @@ other information that should be provided before the modules are installed.
 
 Navigate to **[release page](https://github.com/vroncevic/flask_func_struct/releases)** download and extract release archive.
 
-To install modules type the following:
-
+To install modules type the following
 ```
 tar xvzf flask_func_struct-x.y.z.tar.gz
 cd flask_func_struct-x.y.z/
@@ -45,8 +44,7 @@ Or You can use docker to create image/container.
 
 ### Dependencies
 
-**flask_func_struct** requires other modules and libraries (Python 2.x/3.x):
-
+**flask_func_struct** requires other modules and libraries (Python 2.x/3.x)
 ```
 * Flask
 * Flask-Migrate
@@ -64,96 +62,83 @@ Or You can use docker to create image/container.
 
 ### Package structure
 
-Expected framework structure:
-
+Expected framework structure
 ```
-.
-├── app_server/
-│   ├── configuration/
-│   │   ├── database/
-│   │   │   ├── development_config.py
-│   │   │   ├── __init__.py
-│   │   │   ├── production_config.py
-│   │   │   └── test_config.py
+app_server/
+├── configuration/
+│   ├── database/
 │   │   ├── development_config.py
 │   │   ├── __init__.py
-│   │   ├── mail/
-│   │   │   ├── development_config.py
-│   │   │   ├── __init__.py
-│   │   │   ├── production_config.py
-│   │   │   └── test_config.py
 │   │   ├── production_config.py
 │   │   └── test_config.py
-│   ├── forms/
-│   │   ├── base/
-│   │   │   ├── contact.py
-│   │   │   └── __init__.py
-│   │   ├── __init__.py
-│   │   └── user/
-│   │       ├── edit.py
-│   │       ├── __init__.py
-│   │       ├── login.py
-│   │       └── register.py
+│   ├── development_config.py
 │   ├── __init__.py
-│   ├── models/
+│   ├── mail/
+│   │   ├── development_config.py
 │   │   ├── __init__.py
-│   │   └── model_user.py
-│   ├── static/
-│   │   ├── base.css
-│   │   └── favicon.ico
-│   ├── templates/
-│   │   ├── base/
-│   │   │   ├── about.html
-│   │   │   ├── contact.html
-│   │   │   └── home.html
-│   │   ├── _base.html
-│   │   ├── errors/
-│   │   │   ├── 401.html
-│   │   │   ├── 403.html
-│   │   │   ├── 404.html
-│   │   │   └── 500.html
-│   │   ├── footer.html
-│   │   ├── header.html
-│   │   └── user/
-│   │       ├── administration.html
-│   │       ├── edit.html
-│   │       ├── login.html
-│   │       ├── members.html
-│   │       └── register.html
-│   ├── tests/
-│   │   ├── base_query.py
-│   │   ├── helpers.py
-│   │   ├── __init__.py
-│   │   ├── sqlalchemy_query.py
-│   │   ├── test_config.py
-│   │   ├── test_main.py
-│   │   └── test_user.py
-│   └── views/
-│       ├── base/
-│       │   ├── about.py
-│       │   ├── contact.py
-│       │   ├── home.py
-│       │   └── __init__.py
+│   │   ├── production_config.py
+│   │   └── test_config.py
+│   ├── production_config.py
+│   └── test_config.py
+├── forms/
+│   ├── base/
+│   │   ├── contact.py
+│   │   └── __init__.py
+│   ├── __init__.py
+│   └── user/
+│       ├── edit.py
 │       ├── __init__.py
-│       └── user/
-│           ├── administration.py
-│           ├── edit.py
-│           ├── __init__.py
-│           ├── login.py
-│           ├── logout.py
-│           ├── members.py
-│           └── register.py
-├── manage_commands/
-│   ├── create_database.py
-│   ├── create_data.py
-│   ├── create_superuser.py
-│   ├── drop_database.py
+│       ├── login.py
+│       └── register.py
+├── __init__.py
+├── models/
 │   ├── __init__.py
-│   ├── orm_test.py
-│   ├── run_coverage.py
-│   └── run_test.py
-└── manage.py
-
+│   └── model_user.py
+├── static/
+│   ├── base.css
+│   └── favicon.ico
+├── templates/
+│   ├── base/
+│   │   ├── about.html
+│   │   ├── contact.html
+│   │   └── home.html
+│   ├── _base.html
+│   ├── errors/
+│   │   ├── 401.html
+│   │   ├── 403.html
+│   │   ├── 404.html
+│   │   └── 500.html
+│   ├── footer.html
+│   ├── header.html
+│   └── user/
+│       ├── administration.html
+│       ├── edit.html
+│       ├── login.html
+│       ├── members.html
+│       └── register.html
+├── tests/
+│   ├── base_query.py
+│   ├── helpers.py
+│   ├── __init__.py
+│   ├── sqlalchemy_query.py
+│   ├── test_config.py
+│   ├── test_main.py
+│   └── test_user.py
+└── views/
+    ├── base/
+    │   ├── about.py
+    │   ├── contact.py
+    │   ├── home.py
+    │   └── __init__.py
+    ├── __init__.py
+    └── user/
+        ├── administration.py
+        ├── edit.py
+        ├── __init__.py
+        ├── login.py
+        ├── logout.py
+        ├── members.py
+        └── register.py
 ```
 
 ### Docs

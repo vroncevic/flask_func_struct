@@ -1,11 +1,13 @@
 name: flask_func_struct docker checker
-
 on:
   push:
     branches: [ master ]
+    paths:
+      - 'Dockerfile'
   pull_request:
     branches: [ master ]
-
+    paths:
+      - 'Dockerfile'
 jobs:
   build:
     runs-on: ubuntu-latest
