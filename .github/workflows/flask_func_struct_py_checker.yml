@@ -4,12 +4,14 @@ on:
     branches: [ master ]
     paths:
       - 'app_server/**'
-      - 'setup.py'
+      - 'manage_commands/**'
+      - 'manage.py'
   pull_request:
     branches: [ master ]
     paths:
       - 'app_server/**'
-      - 'setup.py'
+      - 'manage_commands/**'
+      - 'manage.py'
 jobs:
   build:
     runs-on: ubuntu-latest
