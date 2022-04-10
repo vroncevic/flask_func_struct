@@ -32,7 +32,7 @@ __author__ = 'Vladimir Roncevic'
 __copyright__ = 'Copyright 2017, Free software to use and distributed it.'
 __credits__ = ['Vladimir Roncevic']
 __license__ = 'GNU General Public License (GPL)'
-__version__ = '1.2.0'
+__version__ = '1.3.0'
 __maintainer__ = 'Vladimir Roncevic'
 __email__ = 'elektron.ronca@gmail.com'
 __status__ = 'Updated'
@@ -58,4 +58,5 @@ class DevelopmentConfig(BaseConfig):
     WTF_CSRF_ENABLED = False
     DEBUG_TB_ENABLED = True
     DEBUG_TB_INTERCEPT_REDIRECTS = False
-    BCRYPT_LOG_ROUNDS = 4
+    BCRYPT_LOG_ROUNDS = 12
+    BCRYPT_HASH_PREFIX = '2b'

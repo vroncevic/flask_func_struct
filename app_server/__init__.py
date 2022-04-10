@@ -37,15 +37,15 @@ except ImportError as error_message:
 app = Flask(__name__, template_folder='templates', static_folder='static')
 app_settings = os.getenv(
     'APP_SETTINGS',
-    'app_server.configuration.development_config.DevelopmentConfig'
+    'app_server.configuration.test_config.TestConfig'
 )
 app_settings_database = os.getenv(
     'APP_SETTINGS_DATABASE',
-    'app_server.configuration.database.development_config.DevelopmentConfig'
+    'app_server.configuration.database.test_config.TestConfig'
 )
 app_settings_mail = os.getenv(
     'APP_SETTINGS_MAIL',
-    'app_server.configuration.mail.development_config.DevelopmentConfig'
+    'app_server.configuration.mail.test_config.TestConfig'
 )
 app.config.from_object(app_settings)
 app.config.from_object(app_settings_database)
@@ -59,14 +59,14 @@ mail = Mail(app)
 db = SQLAlchemy(app)
 
 try:
-    from app_server.views.base import base_blueprint
-    from app_server.views.user import user_blueprint
+    from app_server.views.base import base
+    from app_server.views.user import user
 except ImportError as error_message:
     MESSAGE = '\n{0}\n{1}\n'.format(__file__, error_message)
     sys.exit(MESSAGE)  # Force close python ATS ##############################
 
-app.register_blueprint(base_blueprint)
-app.register_blueprint(user_blueprint)
+app.register_blueprint(base)
+app.register_blueprint(user)
 
 try:
     from app_server.models.model_user import User
@@ -78,7 +78,7 @@ __author__ = 'Vladimir Roncevic'
 __copyright__ = 'Copyright 2017, Free software to use and distributed it.'
 __credits__ = ['Vladimir Roncevic']
 __license__ = 'GNU General Public License (GPL)'
-__version__ = '1.2.0'
+__version__ = '1.3.0'
 __maintainer__ = 'Vladimir Roncevic'
 __email__ = 'elektron.ronca@gmail.com'
 __status__ = 'Updated'
