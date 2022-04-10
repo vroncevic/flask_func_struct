@@ -3,16 +3,19 @@ Flask Functional-Structured Framework
 
 **flask_func_struct** is framework for Flask web apps.
 
-Developed in `python <https://www.python.org/>`_ code: **100%**.
+Developed in `python <https://www.python.org/>`_ code.
 
 The README is used to introduce the modules and provide instructions on
 how to install the modules, any machine dependencies it may have and any
 other information that should be provided before the modules are installed.
 
-|Python package| |GitHub issues| |Documentation Status| |GitHub contributors|
+|Python checker| |Python package| |GitHub issues| |Documentation Status| |GitHub contributors|
 
-.. |Python package| image:: https://github.com/vroncevic/flask_func_struct/workflows/Python%20package%20flask_func_struct/badge.svg
-   :target: https://github.com/vroncevic/flask_func_struct/workflows/Python%20package%20flask_func_struct/badge.svg?branch=master
+.. |Python checker| image:: https://github.com/vroncevic/flask_func_struct/actions/workflows/flask_func_struct_py_checker.yml/badge.svg
+   :target: https://github.com/vroncevic/flask_func_struct/actions/workflows/flask_func_struct_py_checker.yml
+
+.. |Python package| image:: https://github.com/vroncevic/flask_func_struct/actions/workflows/flask_func_struct_package.yml/badge.svg
+   :target: https://github.com/vroncevic/flask_func_struct/actions/workflows/flask_func_struct_package.yml
 
 .. |GitHub issues| image:: https://img.shields.io/github/issues/vroncevic/flask_func_struct.svg
    :target: https://github.com/vroncevic/flask_func_struct/issues
@@ -20,12 +23,12 @@ other information that should be provided before the modules are installed.
 .. |GitHub contributors| image:: https://img.shields.io/github/contributors/vroncevic/flask_func_struct.svg
    :target: https://github.com/vroncevic/flask_func_struct/graphs/contributors
 
-.. |Documentation Status| image:: https://readthedocs.org/projects/flask_func_struct/badge/?version=latest
-   :target: https://flask_func_struct.readthedocs.io/projects/flask_func_struct/en/latest/?badge=latest
+.. |Documentation Status| image:: https://readthedocs.org/projects/flask_func_struct/badge/?version=master
+   :target: https://flask_func_struct.readthedocs.io/projects/flask_func_struct/en/master/?badge=master
 
 .. toctree::
    :maxdepth: 4
-   :caption: Contents:
+   :caption: Contents
 
    self
 
@@ -51,26 +54,32 @@ You can use Docker to create image/container.
 
 |GitHub docker checker|
 
-.. |GitHub docker checker| image:: https://github.com/vroncevic/flask_func_struct/workflows/flask_func_struct%20docker%20checker/badge.svg
-   :target: https://github.com/vroncevic/flask_func_struct/actions?query=workflow%3A%22flask_func_struct+docker+checker%22
+.. |GitHub docker checker| image:: https://github.com/vroncevic/flask_func_struct/actions/workflows/flask_func_struct_docker_checker.yml/badge.svg
+   :target: https://github.com/vroncevic/flask_func_struct/actions/workflows/flask_func_struct_docker_checker.yml
 
 Dependencies
 -------------
 
 **flask_func_struct** requires next modules and libraries
 
-* Flask
-* Flask-Migrate
-* Flask-Script
-* coverage
-* WTForms
-* Flask-Login
-* Flask-BCrypt
-* Flask-Bootstrap
-* Flask-DebugToolbar
-* Flask-SQLAlchemy
-* Flask-Testing
-* Flask-WTF
+.. code-block:: bash
+
+    alembic                           1.6.5
+    Flask                             1.1.4
+    Flask-Bcrypt                      1.0.1
+    Flask-Bootstrap                   3.3.7.1
+    Flask-Cors                        3.0.10
+    Flask-DebugToolbar                0.13.1
+    Flask-Login                       0.5.0
+    Flask-Mail                        0.9.1
+    Flask-Migrate                     2.6.0
+    Flask-Script                      2.0.6
+    Flask-SQLAlchemy                  2.5.1
+    Flask-Testing                     0.8.1
+    Flask-WTF                         0.14.3
+    SQLAlchemy                        1.4.27
+    Werkzeug                          1.0.1
+    WTForms                           2.3.3
 
 Library structure
 ------------------
@@ -182,8 +191,8 @@ Copyright and licence
 Copyright (C) 2017 by `vroncevic.github.io/flask_func_struct <https://vroncevic.github.io/flask_func_struct>`_
 
 **flask_func_struct** is free software; you can redistribute it and/or modify
-it under the same terms as Python itself, either Python version 2.x/3.x or,
-at your option, any later version of Python 3 you may have available.
+it under the same terms as Python itself, either Python version 2.x or,
+at your option, any later version of Python 2 you may have available.
 
 Lets help and support PSF.
 

@@ -34,7 +34,7 @@ __author__ = 'Vladimir Roncevic'
 __copyright__ = 'Copyright 2017, Free software to use and distributed it.'
 __credits__ = ['Vladimir Roncevic']
 __license__ = 'GNU General Public License (GPL)'
-__version__ = '1.2.0'
+__version__ = '1.3.0'
 __maintainer__ = 'Vladimir Roncevic'
 __email__ = 'elektron.ronca@gmail.com'
 __status__ = 'Updated'
@@ -84,7 +84,9 @@ class User(Base):
         '''
         self.username = username
         self.password = bcrypt.generate_password_hash(
-            password, app.config.get('BCRYPT_LOG_ROUNDS')
+            password.encode('utf-8'),
+            app.config.get('BCRYPT_LOG_ROUNDS'),
+            app.config.get('BCRYPT_HASH_PREFIX')
         )
         self.modified = self.created = datetime.datetime.now()
         self.admin = admin

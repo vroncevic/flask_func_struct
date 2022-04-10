@@ -28,7 +28,7 @@ try:
         session, render_template, url_for, redirect, flash, request
     )
     from flask_login import login_user
-    from app_server import bcrypt
+    from app_server import app, bcrypt
     from app_server.forms.user.login import UserLoginForm
     from app_server.models.model_user import User
 except ImportError as error_message:
@@ -39,7 +39,7 @@ __author__ = 'Vladimir Roncevic'
 __copyright__ = 'Copyright 2017, Free software to use and distributed it.'
 __credits__ = ['Vladimir Roncevic']
 __license__ = 'GNU General Public License (GPL)'
-__version__ = '1.2.0'
+__version__ = '1.3.0'
 __maintainer__ = 'Vladimir Roncevic'
 __email__ = 'elektron.ronca@gmail.com'
 __status__ = 'Updated'
@@ -71,8 +71,10 @@ class Login(View):
         if form.validate_on_submit():
             user = User.query.filter_by(email=form.email.data).first()
             password_ok = bcrypt.check_password_hash(
-                user.password, request.form.get('password')
+                user.password.encode('utf-8'),
+                request.form.get('password').encode('utf-8')
             )
+            
             if user and password_ok:
                 login_user(user)
                 flash('You are logged in. Welcome!', 'success')

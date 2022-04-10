@@ -34,7 +34,7 @@ __author__ = 'Vladimir Roncevic'
 __copyright__ = 'Copyright 2017, Free software to use and distributed it.'
 __credits__ = ['Vladimir Roncevic']
 __license__ = 'GNU General Public License (GPL)'
-__version__ = '1.2.0'
+__version__ = '1.3.0'
 __maintainer__ = 'Vladimir Roncevic'
 __email__ = 'elektron.ronca@gmail.com'
 __status__ = 'Updated'
@@ -83,8 +83,8 @@ class CreateSuperUser(Command):
         admin = User(
             username=username, password=superuser_password, admin=True
         )
-        admin.fullname='Flask Superuser'
-        admin.email=superuser_email
+        admin.fullname = 'Flask Superuser'
+        admin.email = superuser_email
         self.__db.session.add(admin)
         self.__db.session.commit()
         print('Done')

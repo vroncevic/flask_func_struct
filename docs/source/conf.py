@@ -1,9 +1,14 @@
 # -*- coding: utf-8 -*-
 
+import os
+import sys
+
+sys.path.insert(0, os.path.abspath('../../'))
+
 project = u'flask_func_struct'
 copyright = u'2017, Vladimir Roncevic <elektron.ronca@gmail.com>'
 author = u'Vladimir Roncevic <elektron.ronca@gmail.com>'
-version = u'1.2.0'
+version = u'1.3.0'
 release = u'https://github.com/vroncevic/flask_func_struct/releases'
 extensions = ['sphinx.ext.autodoc', 'sphinx.ext.viewcode']
 templates_path = ['_templates']
