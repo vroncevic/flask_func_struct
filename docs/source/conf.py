@@ -1,10 +1,5 @@
 # -*- coding: utf-8 -*-
 
-import os
-import sys
-
-sys.path.insert(0, os.path.abspath('../../'))
-
 project = u'flask_func_struct'
 copyright = u'2017, Vladimir Roncevic <elektron.ronca@gmail.com>'
 author = u'Vladimir Roncevic <elektron.ronca@gmail.com>'
