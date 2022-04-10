@@ -212,7 +212,7 @@ app_server/
 
 ### Docs
 
-[![documentation status](https://readthedocs.org/projects/flask_func_struct/badge/?version=master)](https://flask_func_struct.readthedocs.io/projects/flask_func_struct/en/master/?badge=master) [![Pages build deployment](https://github.com/vroncevic/flask_func_struct/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/vroncevic/flask_func_struct/actions/workflows/pages/pages-build-deployment)
+[![Documentation Status](https://readthedocs.org/projects/flask-func-struct/badge/?version=latest)](https://flask-func-struct.readthedocs.io/en/latest/?badge=latest) [![Pages build deployment](https://github.com/vroncevic/flask_func_struct/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/vroncevic/flask_func_struct/actions/workflows/pages/pages-build-deployment)
 
 📗 More documentation and info at
 

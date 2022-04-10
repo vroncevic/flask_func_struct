@@ -23,8 +23,8 @@ other information that should be provided before the modules are installed.
 .. |GitHub contributors| image:: https://img.shields.io/github/contributors/vroncevic/flask_func_struct.svg
    :target: https://github.com/vroncevic/flask_func_struct/graphs/contributors
 
-.. |Documentation Status| image:: https://readthedocs.org/projects/flask_func_struct/badge/?version=master
-   :target: https://flask_func_struct.readthedocs.io/projects/flask_func_struct/en/master/?badge=master
+.. |Documentation Status| image:: https://readthedocs.org/projects/flask-func-struct/badge/?version=latest
+   :target: https://flask-func-struct.readthedocs.io/en/latest/?badge=latest
 
 .. toctree::
    :maxdepth: 4
