@@ -3,7 +3,7 @@
 project = u'flask_func_struct'
 copyright = u'2017, Vladimir Roncevic <elektron.ronca@gmail.com>'
 author = u'Vladimir Roncevic <elektron.ronca@gmail.com>'
-version = u'1.3.0'
+version = u'1.4.0'
 release = u'https://github.com/vroncevic/flask_func_struct/releases'
 extensions = ['sphinx.ext.autodoc']
 templates_path = ['_templates']

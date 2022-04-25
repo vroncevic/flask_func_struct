@@ -9,21 +9,21 @@ The README is used to introduce the modules and provide instructions on
 how to install the modules, any machine dependencies it may have and any
 other information that should be provided before the modules are installed.
 
-|Python checker| |Python package| |GitHub issues| |Documentation Status| |GitHub contributors|
+|python checker| |python package| |github issues| |documentation status| |github contributors|
 
-.. |Python checker| image:: https://github.com/vroncevic/flask_func_struct/actions/workflows/flask_func_struct_py_checker.yml/badge.svg
-   :target: https://github.com/vroncevic/flask_func_struct/actions/workflows/flask_func_struct_py_checker.yml
+.. |python checker| image:: https://img.shields.io/github/workflow/status/vroncevic/flask_func_struct/flask_func_struct_python_checker?style=flat&label=flask_func_struct%20python%20checker
+   :target: https://img.shields.io/github/workflow/status/vroncevic/flask_func_struct/flask_func_struct_python_checker
 
-.. |Python package| image:: https://github.com/vroncevic/flask_func_struct/actions/workflows/flask_func_struct_package.yml/badge.svg
-   :target: https://github.com/vroncevic/flask_func_struct/actions/workflows/flask_func_struct_package.yml
+.. |python package| image:: https://img.shields.io/github/workflow/status/vroncevic/flask_func_struct/flask_func_struct_package_checker?style=flat&label=flask_func_struct%20package%20checker
+   :target: https://img.shields.io/github/workflow/status/vroncevic/flask_func_struct/flask_func_struct_package_checker
 
-.. |GitHub issues| image:: https://img.shields.io/github/issues/vroncevic/flask_func_struct.svg
+.. |github issues| image:: https://img.shields.io/github/issues/vroncevic/flask_func_struct.svg
    :target: https://github.com/vroncevic/flask_func_struct/issues
 
-.. |GitHub contributors| image:: https://img.shields.io/github/contributors/vroncevic/flask_func_struct.svg
+.. |github contributors| image:: https://img.shields.io/github/contributors/vroncevic/flask_func_struct.svg
    :target: https://github.com/vroncevic/flask_func_struct/graphs/contributors
 
-.. |Documentation Status| image:: https://readthedocs.org/projects/flask-func-struct/badge/?version=latest
+.. |documentation status| image:: https://readthedocs.org/projects/flask-func-struct/badge/?version=latest
    :target: https://flask-func-struct.readthedocs.io/en/latest/?badge=latest
 
 .. toctree::
@@ -52,10 +52,10 @@ To install this set of modules type the following
 
 You can use Docker to create image/container.
 
-|GitHub docker checker|
+|github docker checker|
 
-.. |GitHub docker checker| image:: https://github.com/vroncevic/flask_func_struct/actions/workflows/flask_func_struct_docker_checker.yml/badge.svg
-   :target: https://github.com/vroncevic/flask_func_struct/actions/workflows/flask_func_struct_docker_checker.yml
+.. |github docker checker| image:: https://img.shields.io/github/workflow/status/vroncevic/flask_func_struct/flask_func_struct_docker_checker?style=flat&label=flask_func_struct%20docker%20checker
+   :target: https://img.shields.io/github/workflow/status/vroncevic/flask_func_struct/flask_func_struct_docker_checker
 
 Dependencies
 -------------
@@ -143,14 +143,6 @@ Framework structure
     │   │       ├── login.html
     │   │       ├── members.html
     │   │       └── register.html
-    │   ├── tests/
-    │   │   ├── base_query.py
-    │   │   ├── helpers.py
-    │   │   ├── __init__.py
-    │   │   ├── sqlalchemy_query.py
-    │   │   ├── test_config.py
-    │   │   ├── test_main.py
-    │   │   └── test_user.py
     │   └── views/
     │       ├── base/
     │       │   ├── about.py
@@ -171,22 +163,19 @@ Framework structure
     │   ├── create_data.py
     │   ├── create_superuser.py
     │   ├── drop_database.py
-    │   ├── __init__.py
-    │   ├── orm_test.py
-    │   ├── run_coverage.py
-    │   └── run_test.py
+    │   └── __init__.py
     └── manage.py
 
 Copyright and licence
 ----------------------
 
-|License: GPL v3| |License: Apache 2.0|
+|license: gpl v3| |license: apache 2.0|
 
-.. |License: GPL v3| image:: https://img.shields.io/badge/License-GPLv3-blue.svg
+.. |license: gpl v3| image:: https://img.shields.io/badge/license-gplv3-blue.svg
    :target: https://www.gnu.org/licenses/gpl-3.0
 
-.. |License: Apache 2.0| image:: https://img.shields.io/badge/License-Apache%202.0-blue.svg
-   :target: https://opensource.org/licenses/Apache-2.0
+.. |license: apache 2.0| image:: https://img.shields.io/badge/license-apache%202.0-blue.svg
+   :target: https://opensource.org/licenses/apache-2.0
 
 Copyright (C) 2017 by `vroncevic.github.io/flask_func_struct <https://vroncevic.github.io/flask_func_struct>`_
 
@@ -196,14 +185,14 @@ at your option, any later version of Python 2 you may have available.
 
 Lets help and support PSF.
 
-|Python Software Foundation|
+|python software foundation|
 
-.. |Python Software Foundation| image:: https://raw.githubusercontent.com/vroncevic/flask_func_struct/dev/docs/psf-logo-alpha.png
+.. |python software foundation| image:: https://raw.githubusercontent.com/vroncevic/flask_func_struct/dev/docs/psf-logo-alpha.png
    :target: https://www.python.org/psf/
 
-|Donate|
+|donate|
 
-.. |Donate| image:: https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif
+.. |donate| image:: https://www.paypalobjects.com/en_us/i/btn/btn_donatecc_lg.gif
    :target: https://psfmember.org/index.php?q=civicrm/contribute/transact&reset=1&id=2
 
 Indices and tables
