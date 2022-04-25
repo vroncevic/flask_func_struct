@@ -1,4 +1,4 @@
-name: flask_func_struct py checker
+name: flask_func_struct_python_checker
 on:
   push:
     branches: [ master ]

@@ -10,7 +10,7 @@ The README is used to introduce the modules and provide instructions on
 how to install the modules, any machine dependencies it may have and any
 other information that should be provided before the modules are installed.
 
-[![flask_func_struct py code checker](https://github.com/vroncevic/flask_func_struct/actions/workflows/flask_func_struct_py_checker.yml/badge.svg)](https://github.com/vroncevic/flask_func_struct/actions/workflows/flask_func_struct_py_checker.yml) [![flask_func_struct python package checker](https://github.com/vroncevic/flask_func_struct/actions/workflows/flask_func_struct_package.yml/badge.svg)](https://github.com/vroncevic/flask_func_struct/actions/workflows/flask_func_struct_package.yml) [![GitHub issues open](https://img.shields.io/github/issues/vroncevic/flask_func_struct.svg)](https://github.com/vroncevic/flask_func_struct/issues) [![GitHub contributors](https://img.shields.io/github/contributors/vroncevic/flask_func_struct.svg)](https://github.com/vroncevic/flask_func_struct/graphs/contributors)
+[![flask_func_struct python checker](https://img.shields.io/github/workflow/status/vroncevic/flask_func_struct/flask_func_struct_python_checker?style=flat&label=flask_func_struct%20python%20checker)](https://github.com/vroncevic/flask_func_struct/actions/workflows/flask_func_struct_python_checker.yml) [![flask_func_struct package checker](https://img.shields.io/github/workflow/status/vroncevic/flask_func_struct/flask_func_struct_package_checker?style=flat&label=flask_func_struct%20package%20checker)](https://github.com/vroncevic/flask_func_struct/actions/workflows/flask_func_struct_package_checker.yml) [![GitHub issues open](https://img.shields.io/github/issues/vroncevic/flask_func_struct.svg)](https://github.com/vroncevic/flask_func_struct/issues) [![GitHub contributors](https://img.shields.io/github/contributors/vroncevic/flask_func_struct.svg)](https://github.com/vroncevic/flask_func_struct/graphs/contributors)
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
@@ -28,6 +28,10 @@ other information that should be provided before the modules are installed.
 
 ### Installation
 
+Used next development environment
+
+![debian linux os](https://raw.githubusercontent.com/vroncevic/flask_func_struct/dev/docs/debtux.png)
+
 Navigate to **[release page](https://github.com/vroncevic/flask_func_struct/releases)** download and extract release archive 📦.
 
 To install modules type the following
@@ -43,7 +47,7 @@ cp -R /app_server/ /Flask/
 
 Or You can use Dockerfile to create image/container 🚢.
 
-[![flask_func_struct docker checker](https://github.com/vroncevic/flask_func_struct/actions/workflows/flask_func_struct_docker_checker.yml/badge.svg)](https://github.com/vroncevic/flask_func_struct/actions/workflows/flask_func_struct_docker_checker.yml)
+[![flask_func_struct docker checker](https://img.shields.io/github/workflow/status/vroncevic/flask_func_struct/flask_func_struct_docker_checker?style=flat&label=flask_func_struct%20docker%20checker)](https://github.com/vroncevic/flask_func_struct/actions/workflows/flask_func_struct_docker_checker.yml)
 
 ### Usage
 
@@ -185,14 +189,6 @@ app_server/
 │       ├── login.html
 │       ├── members.html
 │       └── register.html
-├── tests/
-│   ├── base_query.py
-│   ├── helpers.py
-│   ├── __init__.py
-│   ├── sqlalchemy_query.py
-│   ├── test_config.py
-│   ├── test_main.py
-│   └── test_user.py
 └── views/
     ├── base/
     │   ├── about.py
@@ -212,7 +208,7 @@ app_server/
 
 ### Docs
 
-[![Documentation Status](https://readthedocs.org/projects/flask-func-struct/badge/?version=latest)](https://flask-func-struct.readthedocs.io/en/latest/?badge=latest) [![Pages build deployment](https://github.com/vroncevic/flask_func_struct/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/vroncevic/flask_func_struct/actions/workflows/pages/pages-build-deployment)
+[![Documentation Status](https://readthedocs.org/projects/flask-func-struct/badge/?version=latest)](https://flask-func-struct.readthedocs.io/en/latest/?badge=latest)
 
 📗 More documentation and info at
 
