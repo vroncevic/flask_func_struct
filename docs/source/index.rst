@@ -1,9 +1,9 @@
 Flask Functional-Structured Framework
 --------------------------------------
 
-**flask_func_struct** is framework for Flask web apps.
+☯️ **flask_func_struct** is framework for Flask web apps.
 
-Developed in `python <https://www.python.org/>`_ code.
+Developed in 🐍 `python <https://www.python.org/>`_ code.
 
 The README is used to introduce the modules and provide instructions on
 how to install the modules, any machine dependencies it may have and any
@@ -35,11 +35,11 @@ other information that should be provided before the modules are installed.
 Installation
 -------------
 
-Navigate to release `page`_ download and extract release archive.
+Navigate to release `page`_ download and extract release archive 📦.
 
 .. _page: https://github.com/vroncevic/flask_func_struct/releases
 
-To install this set of modules type the following
+To install **flask_func_struct** 📦 type the following
 
 .. code-block:: bash
 
@@ -50,7 +50,7 @@ To install this set of modules type the following
     cp -R /manage_commands/ /FlaskApp/
     cp -R /app_server/ /Flask/
 
-You can use Docker to create image/container.
+You can use Docker to create image/container 🚢.
 
 |github docker checker|
 
@@ -86,7 +86,7 @@ Library structure
 
 **flask_func_struct** is based on OOP
 
-Framework structure
+🧰 Framework structure
 
 .. code-block:: bash
 
@@ -183,7 +183,7 @@ Copyright (C) 2017 by `vroncevic.github.io/flask_func_struct <https://vroncevic.
 it under the same terms as Python itself, either Python version 2.x or,
 at your option, any later version of Python 2 you may have available.
 
-Lets help and support PSF.
+🌎 🌍 🌏 Lets help and support PSF.
 
 |python software foundation|
 
