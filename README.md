@@ -34,7 +34,7 @@ Used next development environment
 
 Navigate to **[release page](https://github.com/vroncevic/flask_func_struct/releases)** download and extract release archive 📦.
 
-To install modules type the following
+To install **flask_func_struct** 📦 type the following
 
 ```bash
 tar xvzf flask_func_struct-x.y.z.tar.gz
